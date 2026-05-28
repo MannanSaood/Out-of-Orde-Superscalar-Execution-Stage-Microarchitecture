@@ -13,8 +13,8 @@ This project isolates and designs the control heart of a high-performance microp
 - **Weeks 7–9 (Retirement ROB)**: Code the circular ROB, supporting precise exception rollback logic and flash-clear rollback controls.
 
 ## 3. Advanced Validation Techniques
-- **Speculative Rollback Recovery Stress Testing**: Build a targeted UVM sequence designed to inject dependent instruction chains, trigger branch mispredictions during mid-execution, and verify that the rename unit rolls back to its retirement map snapshot without leaking a single register map pointer.
-- **Structural Hazard Coverage**: Force structural bottlenecking by driving cases where the Issue Queue is saturated, the Free List is depleted, and the execution pipes are stalled. The UVM coverage model must prove that the dispatch stage halts instruction flow instantly and resumes without instruction loss.
+- **Speculative Rollback Recovery Stress Testing**: Build targeted test sequences (using **Verilator** or commercial simulators) designed to inject dependent instruction chains, trigger branch mispredictions during mid-execution, and verify that the rename unit rolls back to its retirement map snapshot without leaking a single register map pointer.
+- **Structural Hazard Coverage**: Force structural bottlenecking by driving cases where the Issue Queue is saturated, the Free List is depleted, and the execution pipes are stalled. The verification environment must prove that the dispatch stage halts instruction flow instantly and resumes without instruction loss.
 - **Physical Register Lifecycle Assertion**: Write a formal SVA mapping register allocations:
   ```systemverilog
   assert property (@(posedge clk)
