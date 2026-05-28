@@ -36,6 +36,6 @@ This project isolates and designs the control heart of a high-performance microp
 
 | Metric | Resource | Value | Utilization |
 | :--- | :--- | :--- | :--- |
-| **Area** | Slice LUTs | 0 (Optimized) | 0.00% |
-| **Area** | Slice Registers | 0 (Optimized) | 0.00% |
+| **Area** | Slice LUTs | 343 | 1.65% |
+| **Area** | Slice Registers | 595 | 1.43% |
 | **Timing** | Fmax | Unconstrained | N/A |
